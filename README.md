@@ -11,8 +11,27 @@ A simple machine learning project to predict house prices in Bangalore based on 
 ![Interface Screenshot](screenshot.png)
 
 ## API Endpoints
-- **GET** `/get_location_names` → Returns available locations.
-- **POST** `/predict_home_price` → Takes user input and returns an estimated price.
+### **GET** `/get_location_names`
+**Response:**
+```json
+{
+    "locations": ["1st block jayanagar", "Rajaji Nagar", "neeladri nagar", "nehru nagar", "Whitefield", "vidyaranyapura", "vijayanagar"]
+}
+```
+
+### **POST** `/predict_home_price`
+**Request Parameters:**
+- `total_sqft` (float)
+- `bhk` (int)
+- `bath` (int)
+- `location` (string)
+
+**Response:**
+```json
+{
+    "estimated_price": 75.5
+}
+```
 
 ## To-Do
 - Improve UI design
