@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Property Price Estimator</h2>
+        <form id="priceForm">
+            <div class="form-group">
+                <label for="area">Area (sqft):</label>
+                <input type="text" id="uiSqft" name="Squareft" placeholder="Enter area in sqft" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bhk">BHK:</label>
+                <select id="bhk" name="uiBHK" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bath">Bath:</label>
+                <select id="bath" name="uiBathrooms" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select id="location" name="uiLocations" required>
+                    <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+                    <option>Electronic City</option>
+                    <option>Rajaji Nagar</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="onClickedEstimatePrice()">Estimate Price</button>
+        </form>
+
+        <div id="uiEstimatedPrice"></div>
+    </div>
+
+
+</body>
+
+</html>
